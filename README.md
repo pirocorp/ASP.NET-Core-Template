@@ -36,3 +36,6 @@ A ready-to-use template for ASP.NET Core with repositories, services, models map
 	* Sandbox
 	
 * Common -> Global Constants, etc
+
+## Notes
+* Migrations should be applied through PowerShell e.g. dotnet ef migrations add MigrationName
