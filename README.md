@@ -14,18 +14,18 @@ A ready-to-use template for ASP.NET Core with repositories, services, models map
 
 ## Template Structure
 
-* Data
+* Data -> Data Layer
 	* Data
 	* Data.Common
 	* Data.Models	
 	
-* Services
+* Services -> Service Layer
 	* Services
 	* Services.Data
 	* Services.Mapping
 	* Services.Messaging
 	
-* Web
+* Web -> Presentation Layer
 	* Web
 	* Web.Infrastructure
 	* Web.ViewModels
