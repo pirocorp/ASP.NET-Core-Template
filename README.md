@@ -10,3 +10,29 @@ A ready-to-use template for ASP.NET Core with repositories, services, models map
 
 - [Nikolay Kostov](https://github.com/NikolayIT)
 - [Vladislav Karamfilov](https://github.com/vladislav-karamfilov)
+
+
+## Template Structure
+
+* Data
+	* Data
+	* Data.Common
+	* Data.Models	
+	
+* Services
+	* Services
+	* Services.Data
+	* Services.Mapping
+	* Services.Messaging
+	
+* Web
+	* Web
+	* Web.Infrastructure
+	* Web.ViewModels
+	
+* Tests
+	* Services.Data.Tests
+	* Web.Tests
+	* Sandbox
+	
+* Common
