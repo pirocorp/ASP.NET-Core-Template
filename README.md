@@ -20,22 +20,23 @@ A ready-to-use template for ASP.NET Core with repositories, services, models map
 	* Data.Models -> Models(Entities)
 	
 * Services -> Service Layer
-	* Services
-	* Services.Data
+	* Services -> External services
+	* Services.Data -> Services and services interfaces for managing data in database
 	* Services.Mapping -> AutoMapper configuration and custom interfaces
 	* Services.Messaging -> E-mail Sender, etc.
 	
 * Web -> Presentation Layer
-	* Web -> ASP.NET Core MVC
-	* Web.Infrastructure
+	* Web -> ASP.NET Core MVC, in Startup class is DI container, default startup project
+	* Web.Infrastructure -> Helpers, etc.
 	* Web.ViewModels -> View Models, etc.
 	
 * Tests -> Test Projects
-	* Services.Data.Tests
-	* Web.Tests
-	* Sandbox
+	* Services.Data.Tests -> Project with tests for services
+	* Web.Tests -> Project with tests for ASP.NET Core MVC
+	* Sandbox -> Sandbox
 	
 * Common -> Global Constants, etc
 
 ## Notes
 * Migrations should be applied through PowerShell e.g. dotnet ef migrations add MigrationName
+* Controllers must inherit BaseController 
