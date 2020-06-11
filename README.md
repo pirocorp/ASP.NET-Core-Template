@@ -26,7 +26,7 @@ A ready-to-use template for ASP.NET Core with repositories, services, models map
 	* Services.Messaging -> E-mail Sender, etc.
 	
 * Web -> Presentation Layer
-	* Web -> ASP.NET Core MVC, in Startup class is DI container, default startup project
+	* Web -> ASP.NET Core MVC, in Startup class is DI container, default startup project, appsettings.json
 	* Web.Infrastructure -> Helpers, etc.
 	* Web.ViewModels -> View Models, etc.
 	
