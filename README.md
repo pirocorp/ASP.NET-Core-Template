@@ -15,24 +15,24 @@ A ready-to-use template for ASP.NET Core with repositories, services, models map
 ## Template Structure
 
 * Data -> Data Layer
-	* Data
-	* Data.Common
-	* Data.Models	
+	* Data -> DbContext, Migrations, Entities Configuration, Repository Implementation, Raw query runner, Seeders, Database configurations, etc.
+	* Data.Common -> BaseModel, Repository Interfaces, QueryRunner interface, etc.
+	* Data.Models -> Models(Entities)
 	
 * Services -> Service Layer
 	* Services
 	* Services.Data
-	* Services.Mapping
-	* Services.Messaging
+	* Services.Mapping -> AutoMapper configuration and custom interfaces
+	* Services.Messaging -> E-mail Sender, etc.
 	
 * Web -> Presentation Layer
-	* Web
+	* Web -> ASP.NET Core MVC
 	* Web.Infrastructure
-	* Web.ViewModels
+	* Web.ViewModels -> View Models, etc.
 	
-* Tests
+* Tests -> Test Projects
 	* Services.Data.Tests
 	* Web.Tests
 	* Sandbox
 	
-* Common
+* Common -> Global Constants, etc
