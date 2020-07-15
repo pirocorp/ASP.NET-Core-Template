@@ -108,6 +108,10 @@ A ready-to-use template for ASP.NET Core with repositories, services, models map
 	
 * Common -> Global Constants, etc
 	* GlobalConstants -> Contains global constants (AdministratorRoleName)
+	
+* Rules.ruleset -> StyleCop ruleset
+* Settings.StyleCop -> StyleCop settings
+* stylecop.json -> More StyleCop settings
 
 ## Notes
 * Migrations should be applied through PowerShell e.g. dotnet ef migrations add MigrationName
