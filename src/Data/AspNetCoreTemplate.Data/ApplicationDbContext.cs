@@ -74,6 +74,12 @@
             }
         }
 
+		/// <summary>
+        /// Filter only none deleted entities. When entity is IDeletableEntity.
+        /// </summary>
+        /// <remarks>Applies EF Core Global filter.</remarks>
+        /// <typeparam name="T">Entity type.</typeparam>
+        /// <param name="builder">Model builder for configuring filter.</param>
         private static void SetIsDeletedQueryFilter<T>(ModelBuilder builder)
             where T : class, IDeletableEntity
         {
