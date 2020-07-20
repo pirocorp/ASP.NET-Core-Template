@@ -7,6 +7,13 @@
     using AspNetCoreTemplate.Data.Models;
     using AspNetCoreTemplate.Services.Mapping;
 
+	/// <summary>
+    /// If services are using repository pattern they work with repository.
+    /// Otherwise they work with dbContext.
+    /// </summary>
+	/// <remarks>
+	/// In this case this service is using IDeletableEntityRepository
+	/// </remarks>
     public class SettingsService : ISettingsService
     {
         private readonly IDeletableEntityRepository<Setting> settingsRepository;

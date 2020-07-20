@@ -6,6 +6,9 @@
 
     using Microsoft.EntityFrameworkCore;
 
+	/// <summary>
+    /// Makes column IsDeleted index on all entities implementing IDeletableEntity.
+    /// </summary>
     internal static class EntityIndexesConfiguration
     {
         public static void Configure(ModelBuilder modelBuilder)

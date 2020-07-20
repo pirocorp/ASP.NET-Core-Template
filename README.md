@@ -20,7 +20,7 @@ A ready-to-use template for ASP.NET Core with repositories, services, models map
 			* ApplicationUserConfiguration -> Identity user configuration
 		* Migrations -> Migrations
 		* Repositories -> Repository implementations
-			* EfRepository -> Implements repository pattenr. Implements IRepository
+			* EfRepository -> Implements repository pattern. Implements IRepository
 			* EfDeletableEntityRepository -> Implements repository pattern for Entities which supports soft delete. Extends EfRepository and implements IDeletableEntityRepository
 		* Seeding -> Seeders
 			* ISeeder -> All seeders must implement ISeeder interface
@@ -38,9 +38,9 @@ A ready-to-use template for ASP.NET Core with repositories, services, models map
 	* Data.Common -> Base Entity Models, Repository Interfaces, QueryRunner interface, etc.
 		* Models -> Base Entity Models
 			* BaseModel -> Implements IAuditInfo
-				* IAuditInfo -> All entities which have CreatedOn and ModifiedOn must implement IAuditInfo interface
+				* IAuditInfo -> All entities which have CreatedOn and ModifiedOn properties must implement IAuditInfo interface
 			* BaseDeletableModel -> inherits BaseModel and implements IDeletableEntity
-				* IDeletableEntity -> all entities which supports soft delete must implement IDeletableEntity interface
+				* IDeletableEntity -> all entities which supports soft delete must implement IDeletableEntity interface. They have IsDeleted and DeletedOn properties.
 		* Repositories -> Interfaces for repository pattern
 			* IRepository -> All reposiotry implementations must implement IRepository interface
 			* IDeletableEntityRepository -> All repository implementations for entities which support soft delete must implement IDeletableEntityRepository
@@ -49,18 +49,18 @@ A ready-to-use template for ASP.NET Core with repositories, services, models map
 	* Data.Models -> Models(Entities, Domain Models)
 		* ApplicationRole -> Implements IdentityRole, IAuditInfo, IDeletableEntity (Supports soft delete)
 		* ApplicationUser -> Implements IdentityUser, IAuditInfo, IDeletableEntity (Supports soft delete)
-		* Setting -> Extends BaseDeletableModel
+		* Setting -> Entity example, all entities should extend BaseDeletableModel or BaseModel. Extends BaseDeletableModel
 		
 * Services -> Service Layer
-	* Services -> 
+	* Services -> Helper services not directly linked to the database
 	
 	* Services.Data -> Services and services interfaces for managing data in database
 		* ISettingsService -> Interface for SettingsService
 		* SettingsService -> SettingsService implements ISettingsService
 		
 	* Services.Mapping -> AutoMapper configuration
-		* IMapFrom -> All projections must implement IMapFrom
-		* IMapTo -> All sources must implement IMapTo
+		* IMapFrom -> All projections from database to custom classes must implement IMapFrom
+		* IMapTo -> All input models must implement IMapTo
 		* IHaveCustomMappings -> All projections with custom mappings must implement IHaveCustomMappings
 		* AutoMapperConfig -> Loads all mappings and stores automapper instance (IMapper MapperInstance)
 		* QueryableMappingExtensions -> AutoMapper extension method To with no need to provide ConfigurationProvider
@@ -93,18 +93,22 @@ A ready-to-use template for ASP.NET Core with repositories, services, models map
 		* libman -> Client side libraries configuration
 		* Program -> Application entry point.
 		* Startup -> Application configuration (Services, Middlewares, Filters, etc.)
+		
 	* Web.Infrastructure -> Helpers, etc.
+	
 	* Web.ViewModels -> View Models, etc.
 		* ErrorViewModel - Error view model
 	
 * Tests -> Test Projects
 	* Services.Data.Tests -> Project with tests for services
 		* SettingsServiceTests -> Tests for Settings Service
+		
 	* Web.Tests -> Selenium Tests
 		* SeleniumServerFactory ->
-		* SeleniumTests ->
+		* SeleniumTests -> UI tests,
 		* WebTests ->
-	* Sandbox -> Console Sandbox
+		
+	* Sandbox -> Console Sandbox for testesting purposes
 	
 * Common -> Global Constants, etc
 	* GlobalConstants -> Contains global constants (AdministratorRoleName)
