@@ -20,7 +20,7 @@ A ready-to-use template for ASP.NET Core with repositories, services, models map
 			* ApplicationUserConfiguration -> Identity user configuration
 		* Migrations -> Migrations
 		* Repositories -> Repository implementations
-			* EfRepository -> Implements repository pattern. Implements IRepository
+			* EfRepository -> Implements repository pattern. Implements IRepository. Can be used for in memory database for integration tests
 			* EfDeletableEntityRepository -> Implements repository pattern for Entities which supports soft delete. Extends EfRepository and implements IDeletableEntityRepository
 		* Seeding -> Seeders
 			* ISeeder -> All seeders must implement ISeeder interface
